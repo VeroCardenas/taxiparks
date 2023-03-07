@@ -1,0 +1,5 @@
+<app-input-label [labelMessage]="label"></app-input-label>
+<input type="text" class="custom--input" [(ngModel)]="value" (ngModelChange)="onChange($event)" (blur)="onTouch()"
+    [placeholder]="placeholder">
+<app-input-message-error *ngIf="isInvalid" errorMessage="{{label}} no válido"></app-input-message-error>
+<!-- [ngClass]="{'error': isInvalid, 'valid' : isValid }" -->
