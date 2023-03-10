@@ -20,7 +20,7 @@ export class CustomValidators {
     return (control: AbstractControl): { [key: string]: boolean } | null => {
       let value: string = control.value;
       if (value) {
-        const valid = value.match(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/);
+        const valid = value.match(/(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/);
         return valid ? null : { password: true };
       }
       return null;
