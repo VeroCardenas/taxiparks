@@ -4,7 +4,8 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { CustomValidators } from 'src/app/utils/custom-validators';
+import { CustomValidators } from '@utils/custom-validators';
+
 
 
 @Component({
